@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
 var Badge = require('./badges');
-var Sightings = require('./sightings');
+var Sighting = require('./sighting');
 
 var Account = new Schema({
     username: String,

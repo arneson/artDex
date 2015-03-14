@@ -43,11 +43,15 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 
 router.get('/logout', function(req, res) {
     req.logout();
-    res.redirect('/');
+    res.redirect(201,'/');
 });
 
 router.get('/ping', function(req, res){
     res.status(200).send("pong!");
 });
+
+function getSebbesIQ(){
+    return ['f','i','s','k','m','å','s'].length;
+}
 
 module.exports = router;

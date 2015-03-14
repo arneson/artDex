@@ -15,6 +15,7 @@ var multer  = require('multer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var animals = require('./functions/reportFinding');
+var Badge = require('./models/badges');
 
 var app = express();
 
@@ -74,6 +75,29 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
+
+
+// mongoose.connection.collections['badges'].drop( function(err) {
+//   console.log('collection dropped');
+// });
+// var badge1 = new Badge({ 
+//     name: 'Letare!',
+//     criteria:{prop:'sightings',theVal:1},
+//     imageUrl: '/badges/letare.png'
+// });
+// badge1.save(function(err, badge1){
+//     if (err) return console.error(err);
+// });
+// var badge2 = new Badge({ 
+//     name: 'Femling',
+//     criteria:{prop:'sightings',theVal:5},
+//     imageUrl: '/badges/femling.png'
+// });
+// badge2.save(function(err, badge2){
+//     if (err) return console.error(err);
+// });
+
+
 
 // error handlers
 

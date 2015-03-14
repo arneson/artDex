@@ -1,2 +1,505 @@
-'<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><s:Fault><faultcode xmlns:a="http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher">a:InternalServiceFault</faultcode><faultstring xml:lang="sv-SE">The server was unable to process the request due to an internal error.  For more information about the error, either turn on IncludeExceptionDetailInFaults (either from ServiceBehaviorAttribute or from the &lt;serviceDebug&gt; configuration behavior) on the server in order to send the exception information back to the client, or turn on tracing as per the Microsoft .NET Framework SDK documentation and inspect the server trace logs.</faultstring></s:Fault></s:Body></s:Envelope>' },
-  body: '<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><s:Fault><faultcode xmlns:a="http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher">a:InternalServiceFault</faultcode><faultstring xml:lang="sv-SE">The server was unable to process the request due to an internal error.  For more information about the error, either turn on IncludeExceptionDetailInFaults (either from ServiceBehaviorAttribute or from the &lt;serviceDebug&gt; configuration behavior) on the server in order to send the exception information back to the client, or turn on tracing as per the Microsoft .NET Framework SDK documentation and inspect the server trace logs.</faultstring></s:Fault></s:Body></s:Envelope>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	
+    Fel
+
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <link rel="SHORTCUT ICON" href="/Images/Icons/DyntaxaFavicon.ico"/>     
+    
+       
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        if (window.google && window.google.load) {
+            google.load("jquery", "1.7.1");
+            google.load("jqueryui", "1.8.11");
+        } else {
+            document.write('<script type="text/javascript" src="/Scripts/jquery-1.7.1.min.js"><\/script>');
+            document.write('<script type="text/javascript" src="/Scripts/jquery-ui-1.8.11.min.js"><\/script>');            
+        } 
+
+        // Loads the version specific jquery and jquery-ui
+//        google.load("jquery", "1.7.1");
+//        google.load("jqueryui", "1.8.11");
+        // Loads the latest versions of jquery and jquery-ui
+        //google.load("jquery", "1");
+        //google.load("jqueryui", "1");
+    </script>
+    
+
+
+    <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>    
+    
+    <script src="/Scripts/jquery.ui.datepicker-en.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.ui.datepicker-sv.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.ui.nestedSortable.js" type="text/javascript"></script>
+    
+    <script src="/Scripts/superfish-1.4.8/js/hoverIntent.js" type="text/javascript"></script>    
+    <script src="/Scripts/superfish-1.4.8/js/superfish.js" type="text/javascript"></script> 
+    
+    <script src="/Scripts/jquery.MoverBoxes.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.blockUI.js" type="text/javascript"></script>
+    
+    <link href="/Scripts/superfish-1.4.8/css/superfish.css" rel="stylesheet" type="text/css" />    
+    <link href="/Css/Reset.css?m=20140130015108" rel="stylesheet" type="text/css" />
+    <link href="/Css/JQueryUI.css?m=20140130015108" rel="stylesheet" type="text/css" />
+    <link href="/Css/Common.css?m=20140918091156" rel="stylesheet" type="text/css" />
+    <link href="/Css/Site.css?m=20140612085801" rel="stylesheet" type="text/css" />
+    <link href="/Css/Newlyadded.css?m=20140918091156" rel="stylesheet" type="text/css" />
+    
+    
+    <script src="/Scripts/Dynatree/jquery/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="/Scripts/Dynatree/jquery/jquery.cookie.js" type="text/javascript"></script>
+
+    <link href="/Scripts/Dynatree/src/skin/ui.dynatree.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/Dynatree/src/jquery.dynatree.min.js" type="text/javascript"></script>
+        
+    <link href="/Scripts/DataTables-1.8.2/media/css/demo_table.css" rel="stylesheet"type="text/css" />
+    <script src="/Scripts/DataTables-1.8.2/media/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="/Scripts/dyntaxa.references.js?m=20140130015109" type="text/javascript"></script>	
+    	
+    <script src="/Scripts/jquery.tools.min.js" type="text/javascript"></script>
+    <script src="/Scripts/dyntaxa.common.js?m=20140130015109" type="text/javascript"></script>
+    <script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.subcookie.js" type="text/javascript"></script>
+    <script src="/Scripts/json2.js" type="text/javascript"></script>    
+
+    <script src="/Scripts/jquery.ba-resize.min.js" type="text/javascript"></script>    
+
+    <link href="/Scripts/dropdown-check-list/css/ui.dropdownchecklist.standalone.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/dropdown-check-list/js/ui.dropdownchecklist-1.4-min.js" type="text/javascript"></script>
+    
+    <link href="/Scripts/select2-3.4.2/select2.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/select2-3.4.2/select2.min.js" type="text/javascript"></script>        
+    
+    
+    
+
+
+    
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-32170396-1']);
+        _gaq.push(['_setDomainName', 'dyntaxa.se']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body >
+       
+        <div id="header">
+           <div id="headerSLULogo" class="container">
+               <a href="http://www.slu.se/" target="_blank"><img src="/Images/logo_slu_112x112.png" width="100" height="100" class="headerSLUImg" alt="Sveriges lantbruksuniversitet" title="Sveriges lantbruksuniversitet" /></a>
+           </div>
+           <div id="headerSymbol" class="container"></div>
+           <div id="headerimage" class="container">
+                <div id="title">
+                    <h1>Dyntaxa </h1>
+                </div>
+                <div id="subTitle">
+                    <p>Svensk Taxonomisk Databas</p>
+                </div>                
+                
+                <div id="logindisplay">
+                    
+
+<ul>
+      
+    <li>
+        
+         
+                <a style="float:right" title="English" href="/Culture/SetCulture?culture=en-GB&returnUrl=%2FNavigation%2FGetTreeData%3FtaxonId%3D1">
+                    <span title="English" class="IconFlag IconFlag-en"></span>
+                    <!--&nbsp;- English-->
+                </a>
+        
+                [ <a href="/Account/LogIn?returnUrl=%2FNavigation%2FGetTreeData%3FtaxonId%3D1">
+                    Logga in
+                </a> ]
+                
+       
+    </li>
+    
+    
+    
+    
+</ul>
+                </div>
+                
+                
+                
+            </div>                                  
+            
+            <div id="menuContainer"> 
+                 
+          
+              
+
+
+<script type="text/javascript">
+
+	// initialise plugins
+    jQuery(function () {
+        jQuery('div#menuContainer > ul.sf-menu').superfish({            
+            delay: 100,
+            animation: { opacity: 'show' },
+            speed: 'fast',
+            autoArrows: true,
+            dropShadows: true
+        }
+        );
+
+        $("div#menuContainer > ul.sf-menu").find('a[href!="#"]').click(function () {
+            $.blockUI({ overlayCSS: { backgroundColor: 'transparent'}, message: '<h1><img src="/Images/Icons/ajax-loader.gif" /> Laddar...</h1>' });
+        });
+
+
+    });
+
+</script>
+
+
+
+<ul class="sf-menu">
+
+
+       <li >
+            <a href="/Taxon/SearchResult/0">S&#246;k</a>
+            
+       </li>
+       
+   
+       <li >
+            <a href="/Taxon/Info/0">Information</a>
+            
+       </li>
+       
+   
+       <li >
+            <a href="/Revision/List/0">Revisioner</a>
+            
+       </li>
+       
+   
+       <li >
+            <a href="/Match/Settings/0">Matcha</a>
+            
+       </li>
+       
+   
+       <li >
+            
+                <a href="#">Exportera</a>
+                <ul>
+                           
+                        
+                                     
+                        <li><a href="/Export/TaxonList/0">Rak lista</a></li>                                                            
+                           
+                        
+                                     
+                        <li><a href="/Export/HierarchicalTaxonList/0">Hierarkisk lista</a></li>                                                            
+                    
+                </ul>
+            
+                <ul>
+                                    
+                    <li><a href="/Export/TaxonList/0">Rak lista</a></li>                                                            
+                                    
+                    <li><a href="/Export/HierarchicalTaxonList/0">Hierarkisk lista</a></li>                                                            
+                
+                </ul>
+            
+       </li>
+       
+   
+</ul>
+  
+                
+            </div>
+            <div id="externalMenuContainer">
+                <ul class="sf-menu sf-shadow right">
+                    <li><a href="http://www.slu.se/dyntaxa/" target="_blank">Om Dyntaxa</a></li>
+                </ul>            
+            </div>
+
+        </div>
+        
+        
+        <div id="mainWrapper">
+
+            <div id="leftNavigation">
+                
+
+                <form action="/Navigation/ChangeRootTaxon" id="changeRootTaxonForm" method="post" name="changeRootTaxonForm">
+    <div id="navigateParentDiv">
+        <div class="group">
+               <label for="selectRootTaxon">Nuvarande rottaxon</label>                          
+            <select id="selectRootTaxon" name="selectRootTaxon" style="max-width: 240px;">
+                
+                    <option  selected="selected"  value="0">Biota (Rot)</option>               
+                              
+            </select>
+        </div>
+      </div>   
+</form><form action="/Navigation/TaxonTreeNavigate" id="navigateTaxonForm" method="post" name="navigateTaxonForm"><input id="NavigateId" name="NavigateId" type="hidden" value="" />     
+        <input id="ExpandedNodes" name="ExpandedNodes" type="hidden" value="" />      
+    </form>
+	
+
+	<div id="navigateTaxonTree"> </div>	
+	
+	<script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#selectRootTaxon").change(function() {
+//                var value = $(this).val();
+//                alert(value);
+                var frm = document.changeRootTaxonForm;
+                frm.submit();                
+            });            
+            
+            $("#navigateTaxonTree").dynatree({
+                onActivate: function (node) {
+                    // Use status functions to find out about the calling context        
+                    var isInitializing = node.tree.isInitializing(); // Tree loading phase        
+                    var isReloading = node.tree.isReloading(); // Loading phase, and reading status from cookies        
+                    var isUserEvent = node.tree.isUserEvent(); // Event was triggered by mouse or keyboard                            
+ 
+                    var frm = document.navigateTaxonForm;
+                    frm.NavigateId.value = node.data.key;
+
+                    var expandedNodes = [];                    
+                    this.visit(function(n) {
+                        if (n.isExpanded())
+                            expandedNodes.push(n.data.key);                            
+                    }, true);
+                    expandedNodes.shift(); // delete first node. Don't know why the element is there.
+                    frm.ExpandedNodes.value = JSON.stringify(expandedNodes); 
+                    
+                    $.blockUI({ overlayCSS: { backgroundColor: 'transparent' }, message: '<h1><img src="/Images/Icons/ajax-loader.gif" /> Laddar...</h1>' });
+                    frm.submit();                    
+                },                          
+                onLazyRead: function(node){   
+                    node.appendAjax({
+                        url: '/Navigation/GetTreeData',                        
+                        type: "GET",
+                        data: {"taxonId": node.data.key},                         
+                        dataType: "json",                           
+                        success: function(node) {                               
+                            // Called after nodes have been created and the waiting icon was removed.
+                        },                           
+                       cache: false // Append random '_' argument to url to prevent caching.                         
+                    });    
+                },                                                                                
+                persist: false,
+                generateIds: true,
+                fx: { height: "toggle", duration: 100 }, 
+                selectMode: 1,        
+                clickFolderMode: 1,                                       
+                children: {"title":"Biota (Liv)","isLazy":false,"isFolder":true,"expand":true,"activate":true,"key":"1","children":[{"title":"Algae (alger)","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"2","children":null,"addClass":"non-taxonomic-label"},{"title":"Animalia (djur)","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"3","children":null},{"title":"Archaea","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"4","children":null},{"title":"Bacteria","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"5","children":null},{"title":"Chromista","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"6","children":null},{"title":"Fungi (svampar)","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"7","children":null},{"title":"Plantae (egentliga v&#228;xter)","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"8","children":null},{"title":"Protozoa","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"9","children":null},{"title":"Viruses","isLazy":true,"isFolder":true,"expand":false,"activate":false,"key":"10","children":null}]}
+            });
+                       
+        });            
+                                   
+	</script>
+  
+            </div>
+        
+            <div id="main">         
+                <noscript>
+                    <div id="NoScriptDiv">
+                        Denna sida anv&#228;nder Javascript. Din webbl&#228;sare st&#246;der antingen inte Javascript eller s&#229; har du den avst&#228;ngd. F&#246;r att se denna sida som det &#228;r t&#228;nkt att visas v&#228;nligen anv&#228;nd en webbl&#228;sare med Javascript aktiverat.
+                    </div>
+                </noscript>   
+                
+
+<form action="/Navigation/GetTreeData?taxonId=1" method="post">
+    
+    <fieldset id="validationSummaryContainer" class="validationSummaryFieldset">
+        <h2 class="validationSummaryHeader">
+            <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+        </h2>
+    </fieldset>
+   
+    <div id="fullContainer">
+         <fieldset>
+            <h1 class="readHeader">Fel: NullReferenceException</h1>    
+            <div class="fieldsetContent">   
+                <br/>
+                <p>
+                    <textarea cols="20" id="ErrorInformationText" name="ErrorInformationText" rows="10" style="width:600px;">
+Object reference not set to an instance of an object.</textarea>   
+                </p>
+                <br/>   
+                <input id="TaxonId" name="TaxonId" type="hidden" value="" />
+            </div>
+        </fieldset>
+        
+         <p>     
+    
+         </p>          
+     </div>
+
+</form>
+            
+                <br class="clear" />
+
+               
+           
+               <fieldset>
+            
+                    <div id="footerContent">
+                        
+                        
+                        <div class="footerColumn right">
+                            <a href="http://www.slu.se/artdatabanken/" target="_blank"><img src="/Images/logo_artdatabanken_175x40.png" width="175" height="40" class="footerADbImg" alt="ArtDatabanken" title="ArtDatabanken" /></a>
+                        </div>
+                        
+                        <div class="footerColumn right rightSeparator">
+                            <a href="http://www.slu.se/sv/centrumbildningar-och-projekt/artdatabanken/svenska-artprojektet1/" target="_blank"><img src="/Images/logo_sv_artprojektet_90x50.png" height="50" class="footerSvApImg" alt="Svenska artprojektet" title="Svenska artprojektet" /></a>
+                        </div>
+                        
+                        <div class="footerColumn right">
+                            <a href="http://www.slu.se/sv/centrumbildningar-och-projekt/svenska-lifewatch/" target="_blank"><img src="/Images/logo_sv_lifewatch_134x32.png" height="32" class="footerSLWImg" alt="Ing&#229;r i Svenska LifeWatch" title="Ing&#229;r i Svenska LifeWatch" /></a>
+                        </div>
+                    
+                        
+                        
+                        <div class="footerColumn right rightSeparator">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="mailto:dthuvudadministrator@slu.se">Kontakta support</a></li>
+                                <li><a href="http://www.slu.se/sv/centrumbildningar-och-projekt/artdatabanken/vara-data/driftstatus1/" target="_blank">Aktuell driftinformation</a></li>
+                                <li>&nbsp;</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footerColumn right rightSeparator">
+                        <h4>Information</h4>
+                            <ul>
+                                
+                                <li><a href="http://www.slu.se/dyntaxa/" target="_blank">Om Dyntaxa</a></li>
+                                <li><a href="/Home/Cookies">Om cookies</a></li>
+                                <li><a href="/Home/About">Versionsnummer</a></li>
+                            </ul>   
+                        </div>
+
+                        
+
+                        
+
+                    </div>
+
+                </fieldset>
+
+            </div>
+        </div>
+    
+    <script type="text/javascript">
+
+        function saveTreeWidthState() {
+            var treeWidth = $("#leftNavigation").width();
+            $.cookie('taxonTreeWidth', treeWidth, null);
+        }
+
+        function restoreTreeWidth() {
+            var treeWidth = $.cookie('taxonTreeWidth');
+            if (treeWidth != null) {
+                var mainWrapperWidth = $("#mainWrapper").width();
+                var leftNavigationWidth = $("#leftNavigation").width();
+                treeWidth = parseInt(treeWidth);                
+                $("#mainWrapper").width(mainWrapperWidth + treeWidth - leftNavigationWidth);
+                $("#leftNavigation").width(treeWidth);
+            }
+        }
+
+        function updateURL(currUrl, param, paramVal) {
+            var url = currUrl;
+            var newAdditionalURL = "";
+            var tempArray = url.split("?");
+            var baseURL = tempArray[0];
+            var aditionalURL = tempArray[1];
+            var temp = "";
+            if (aditionalURL) {
+                var tempArray = aditionalURL.split("&");
+                for (i = 0; i < tempArray.length; i++) {
+                    if (tempArray[i].split('=')[0] != param) {
+                        newAdditionalURL += temp + tempArray[i];
+                        temp = "&";
+                    }
+                }
+            }
+            var rows_txt = temp + "" + param + "=" + paramVal;
+            var finalURL = baseURL + "?" + newAdditionalURL + rows_txt;
+            return finalURL;
+        }
+
+
+        $(function () {
+            var currentHeight = 0;
+            var mainHeight = 0;
+            restoreTreeWidth();
+
+
+            $("#leftNavigation").resizable({
+                handles: 'e',
+                alsoResize: '#mainWrapper',
+                resize: function (event, ui) {
+                    $(this).css("height", '');
+                    currentHeight = $(this).height();
+                    mainHeight = $("#main").height() - 18;
+                    $("#leftNavigation").css('min-height', Math.max(mainHeight, currentHeight));
+                }
+            });
+
+            currentHeight = $("#leftNavigation").height();
+            mainHeight = $("#main").height() - 18;
+            $("#leftNavigation").css('min-height', Math.max(mainHeight, currentHeight));
+
+            var subkey = 'ErrorsGeneral';
+            restoreH2States(subkey);
+            initToggleFieldsetH2();
+            initToggleFieldsetH3();
+
+
+            $(window).unload(function () {
+                var key = 'ErrorsGeneral';
+                saveH2States(key);
+                saveTreeWidthState();
+            });
+
+            // if page is inside IFrame, then set mode to mini           
+            var isInIFrame = !(top === self);            
+            if (isInIFrame) {
+                var newURL = updateURL(window.location.href, 'mode', 'mini');
+                window.location.href = newURL;
+            }
+
+
+        });        
+        
+    </script>
+
+    
+</body>
+</html>
+
+
+

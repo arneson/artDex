@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <metaname='viewport' content='width=device-width initial-scale=1.0'>
   </head>
+
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-header">
@@ -21,6 +22,21 @@
             <ul style="list-style:none">
             <% for(var i=0; i<badges.length; i++) { %>
                 
+
+<div class="container">
+    <h1> Badges</h1>
+    <ul style="list-style:none">
+    <% for(var i=0; i<badges.length; i++) { %>
+        <li>
+            <p class="lead">
+              <%= badges[i].badge.text%>
+            </p>
+            <img width="200px" height="200px" src=<%= badges[i].badge.imageUrl%>>
+        </li>
+    <% } %>
+    <ul>
+</div>
+
 
                 <li>
                     <p class="lead">

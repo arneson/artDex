@@ -6,15 +6,27 @@ var Badges = require('../models/badges');
 router.get('/', function(req, res, next) {
 	Badges.find({},function(err,badges){
 		if(err) console.log(err);
+		var badgesWStatus = [];
 		if(req.user){
-			for(var i =0; i<req.user.badges.length;i++){
-				for(var j=0; j<badges.length;j++){
-					if(badges[j]._id == req.user.badges[i]._id)
-						badges[j].has = true;
+			for(var i =0;i< badges.length;i++){
+				var has = false;
+				for(var j = 0; j<req.user.badges.length;j++){
+					if(badges[i]._id.toString()==req.user.badges[j]._id.toString()){
+						has = true;
+						break;
+					}
 				}
+				badgesWStatus.push({badge:badges[i], has:has});
 			}
 		}
-		res.render('badges',{badges:badges})
+		else{
+			for(var j=0; j<badges.length;j++){
+				badgesWStatus.push({badge:badges[j], has:false});
+			}
+		}
+
+		console.log("bdg: ",badgesWStatus);
+		res.render('badges',{badges:badgesWStatus});
 	});
 });
 

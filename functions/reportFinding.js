@@ -41,15 +41,12 @@ router.post('/api/photo',function(req,res){
 	    var path = req.files.userPhoto.path;
 	    var newSighting = new Sighting({user:req.user._id, taxonId:taxonId, imagePath:path,location:location});
 	    newSighting.save(function(err,sighting){
+	    	req.user.sightings.push(sighting);
 	    	if(req.user.animalOfDay==taxonId){
-	    		updatePoints(req.user,100,function(req,res){
-	    			res.send(sighting);
-	    		});
+	    		updatePoints(req.user,100,res,req);
 	    	}
 	    	else{
-	    		updatePoints(req.user,5,function(req,res){
-	    			res.send(sighting);
-	    		});
+	    		updatePoints(req.user,5,res,req);
 	    	}
 		});
 	}
@@ -58,20 +55,15 @@ router.post('/api/photo',function(req,res){
 });
 
 
-router.post('/report', Auth.loggedIn, function(req, res) {
-	var taxon = req.body.taxon;
-	var image
-});
-
-function updatePoints(user,points,callback){
-	user.exp = user.exp + points;
-	while(user.exp>user.level*10){
-		user.exp = user.exp - user.level*10;
+function updatePoints(user,points,res,req){
+	user.xp = user.xp + points;
+	while(user.xp>=user.level*10){
+		user.xp = user.xp - user.level*10;
 		user.level++;
 	}
 	user.save(function(err,user){
 		if(err) console.log(err);
-		callback();
+		res.send(user);
 	});
 }
 

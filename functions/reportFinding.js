@@ -4,6 +4,7 @@ var router = express.Router();
 var multer  = require('multer');
 var Sighting = require('../models/sighting');
 var Auth = require('./auth');
+var Badges = require('../models/badges');
 // var app = express();
 // var done=false;
 
@@ -61,9 +62,24 @@ function updatePoints(user,points,res,req){
 		user.xp = user.xp - user.level*10;
 		user.level++;
 	}
-	user.save(function(err,user){
+	updateBadges(user,res,req);
+}
+
+function updateBadges(user,res,req){
+	Badges.findAll({},function(err,badges){
 		if(err) console.log(err);
-		res.send(user);
+		for(var i = 0; i<badges.length;i++){
+			if(badges[i].criterias.prop == 'sightings'){
+				if(user.sightings.length>=badges[i].criterias.theVal){
+					user.badges.push(badges[i]);
+				}
+			}
+		}
+		user.save(function(err,user){
+			if(err) console.log(err);
+			res.send("HÅLL KÄFTEN SEBBE! (DU MED BOHN!)");
+		});
+
 	});
 }
 

@@ -1,3 +1,5 @@
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 // dependencies
 var express = require('express');
 var path = require('path');
@@ -8,9 +10,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var multer  = require('multer');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var animals = require('./functions/reportFinding');
 
 var app = express();
 
@@ -33,8 +37,27 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var done=false;
+var router = express.Router();
+
+app.use(multer({ dest: './uploads/',
+ rename: function (fieldname, filename) {
+    return filename+Date.now();
+  },
+onFileUploadStart: function (file) {
+  console.log(file.originalname + ' is starting ...')
+},
+onFileUploadComplete: function (file) {
+  console.log(file.fieldname + ' uploaded to  ' + file.path)
+  done=true;
+}
+}));
+
+
 
 app.use('/', routes);
+app.use('/animals',animals);
+//var Soap = require('./soaps/analys');
 
 // passport config
 var Account = require('./models/account');
@@ -75,6 +98,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;

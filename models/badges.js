@@ -6,3 +6,4 @@ var Badge = new Schema({
 });
 
 module.exports = mongoose.model('Badge', Badge);
+module.exports.schema = Badge;

@@ -35,7 +35,10 @@ a.navbar-brand {
 	color: #000000;
 }
 
-
+.grayscaleimage {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(100%);
+}
 
 .login-header {
 	text-align: center;

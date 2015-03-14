@@ -3,23 +3,44 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <title>Login</title>
+    <title>Märken</title>
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <metaname='viewport' content='width=device-width initial-scale=1.0'>
   </head>
-<div class="container">
-    <h1> Badges</h1>
-    <ul style="list-style:none">
-    <% for(var i=0; i<badges.length; i++) { %>
-        <li>
-            <p class="lead">
-              <%= badges[i].text%>
-            </p>
-            <img width="200px" height="200px" src=<%= badges[i].imageUrl%>>
-        </li>
-    <% } %>
-    <ul>
-</div>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+              <a class="navbar-brand" style="color:#000000;" href="#">artDex</a>
+              
+              <a style="float: right; color: #000000;"href="/logout">Logga ut</a>
+            </div>
+        </nav>
+        <div class="container">
+            <h1> Märken</h1>
+            <ul style="list-style:none">
+            <% for(var i=0; i<badges.length; i++) { %>
+                
 
+                <li>
+                    <p class="lead">
+                      <%= badges[i].text%>
+                    </p>
+                    <img width="200px" height="200px" src=<%= badges[i].imageUrl%>  >
+
+                </li>
+            <% } %>
+            <ul>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="navbar-header">
+                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/'">Start</button>
+                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/badges'">Märken</button>
+                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/animals'">Rapportera</button>
+                <button type="button" class="btn btn-default navbar-btn">HS</button>
+                 
+            
+            </div>
+        </nav>
+    </body>
 </html>

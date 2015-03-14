@@ -26,7 +26,7 @@ router.post('/register', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login', { user : req.user });
+    res.render('login', { user : req.user, species : 'Älg' });
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {

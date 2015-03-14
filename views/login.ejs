@@ -2,31 +2,40 @@
 <html>
 	<head>
 		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fontin">
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 		<metaname='viewport' content='width=device-width initial-scale=1.0'>
 	</head>
 	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			
 				<div class="navbar-header">
 				  <a class="navbar-brand" href="#">artDex</a>
 				</div>
-			</div>
+			
 		</nav>
 		
 		<div>
-			<h4>Senast rappoterat</h4>
+			<div class="login-header">
+				<h4>Välkommen till artDex</h4>
+				<h6>Spelet där du tävlar i att hitta arter</h6>
+			</div>
+			<br>
+			<br>
+			<h4>Senast rapporterat</h4>
 			<div style="width:50%; float:left;" >
 				<img style="width:100%;" src="https://www.google.com/images/srpr/logo11w.png">
 			</div>
 			<div class="col-xs-6" style="width:50%">
-				<div>Art: Älg</div>
-				<div>Rappoterad:</div>
+				<div class="species">Art: <%= species %></div>
+				<div>Rapporterad:</div>
 				<div>2500m ifrån din nuvarande position.
 				2015-03-14 22:30</div>
-				
+				<br>
+				<br>
 			</div>
+
 		</div>
 			
 			

@@ -66,18 +66,18 @@ function updatePoints(user,points,res,req){
 }
 
 function updateBadges(user,res,req){
-	Badges.findAll({},function(err,badges){
+	Badges.find({},function(err,badges){
 		if(err) console.log(err);
 		for(var i = 0; i<badges.length;i++){
-			if(badges[i].criterias.prop == 'sightings'){
-				if(user.sightings.length>=badges[i].criterias.theVal){
+			if(badges[i].criteria.prop == 'sightings'){
+				if(user.sightings.length>=badges[i].criteria.theVal){
 					user.badges.push(badges[i]);
 				}
 			}
 		}
 		user.save(function(err,user){
 			if(err) console.log(err);
-			res.send("HÅLL KÄFTEN SEBBE! (DU MED BOHN!)");
+			res.redirect(200,'/');
 		});
 
 	});

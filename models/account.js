@@ -12,7 +12,7 @@ var Account = new Schema({
 	xp: {type : Number,default : 0},
 	level: {type : Number,default : 1},
 	badges: [Badge.schema],
-	sightings [Sighting.schema]
+	sightings :[Sighting.schema]
 });
 
 Account.plugin(passportLocalMongoose);

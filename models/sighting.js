@@ -2,10 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Sighting = new Schema({
-    user: {type:Number, ref:'Account'},
+    user: Schema.ObjectId,
     taxonId: String,
     imagePath: String,
-    sightingDate:{type:Date, default:Date.now}
+    sightingDate:{type:Date, default:Date.now},
+    location: { 'type': {type: String, enum: "Point", default: "Point"}, coordinates: { type: [Number],   default: [0,0]} }
 });
 
 

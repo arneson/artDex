@@ -77,7 +77,7 @@ function updateBadges(user,res,req){
 		}
 		user.save(function(err,user){
 			if(err) console.log(err);
-			res.redirect(200,'/');
+			res.redirect('/');
 		});
 
 	});

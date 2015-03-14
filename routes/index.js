@@ -3,10 +3,14 @@ var passport = require('passport');
 var Account = require('../models/account');
 var router = express.Router();
 
+function progressbar(user){
+    return parseInt( (user.xp / 100) * 100);  
+};
 
 router.get('/', function (req, res) {
 	if(req.user){
-		res.render('index', { user : req.user });
+        
+		res.render('index', { user : req.user, level : req.user.level, xp : req.user.xp, progressbarwidth: progressbar(req.user),species : 'Älg' , family : 'Hjortdjur', speciesclass : 'Däggdjur', kingdom : 'Djur'});
 	}else{
 		res.redirect('/login');
 	}

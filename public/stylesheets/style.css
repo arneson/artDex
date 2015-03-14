@@ -7,6 +7,14 @@ body {
 a {
   color: #00B7FF;
 }
+
+body{
+ padding:0px;
+ padding-top: 50px;
+ margin:0px;
+ font-family: 'Open Sans', sans-serif;
+}
+
 .navbar {
 	border: 0px;
 }
@@ -29,9 +37,12 @@ a {
 	font-style: italic;
 	display: inline;
 }
-body{
- padding:0px;
- padding-top: 50px;
- margin:0px;
- font-family: 'Open Sans', sans-serif;
+
+#progressbar {
+  background-color: black;
+  border-radius: 8px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
 }
+
+
+

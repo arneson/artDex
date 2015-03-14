@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+		<style>#progressbar > div {
+   background-color: green;
+   width: <%= progressbarwidth %>%; /* Adjust with JavaScript */
+   height: 10px;
+   border-radius: 10px;
+}</style>
 		<metaname='viewport' content='width=device-width initial-scale=1.0'>
 	</head>
 	<body>
@@ -13,8 +22,36 @@
 			  <%- (user) ? user.username : "Notloggedin" %>
 			</div>
 		</nav>
+		<div id="level-box">
+			<h3>Lv <%= level %></h3>
+			<p><%= xp %> / 100 </p>
+			<div id="progressbar">
+				<div></div>
+			</div>
+			<br>
+
+		</div>
+		<div>
+			<h3>Dagens bonus art</h3>
+			<div class="col-md-6" style="width:50%; float:left;" >
+					<img style="width:100%;" src="https://www.google.com/images/srpr/logo11w.png">
+			</div>
+			<div class="col-md-6" style="width:50%; float:left;">
+				<div class="species"><strong>Art:</strong><p> <%= species %></p><br>
+					<strong>Familj:</strong><p> <%= family %></p><br>
+					<strong>Klass:</strong><p> <%= speciesclass %></p><br>
+					<strong>Rike:</strong><p> <%= kingdom %></p></div>
+					<strong>Rapporterad:</strong><br>
+					<p>2500m ifrån din nuvarande position.
+					2015-03-14 22:30</p>
+				</div>
+					<br>
+					<br>
+
+			</div>
+		</div>
 	
-		
+
 		
 		
 

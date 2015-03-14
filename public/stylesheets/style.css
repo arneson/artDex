@@ -25,9 +25,13 @@ a {
 	text-align: center;
 }
 
+.species p{
+	font-style: italic;
+	display: inline;
+}
 body{
  padding:0px;
  padding-top: 50px;
  margin:0px;
- font-family: 'Fontin', serif;
+ font-family: 'Open Sans', sans-serif;
 }

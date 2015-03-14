@@ -30,7 +30,7 @@ router.post('/register', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login', { user : req.user, species : 'Älg' });
+    res.render('login', { user : req.user, species : 'Älg' , family : 'Hjortdjur', speciesclass : 'Däggdjur', kingdom : 'Djur'});
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {

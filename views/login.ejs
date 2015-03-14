@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fontin">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 		<metaname='viewport' content='width=device-width initial-scale=1.0'>
@@ -28,10 +28,14 @@
 				<img style="width:100%;" src="https://www.google.com/images/srpr/logo11w.png">
 			</div>
 			<div class="col-xs-6" style="width:50%">
-				<div class="species">Art: <%= species %></div>
-				<div>Rapporterad:</div>
-				<div>2500m ifrån din nuvarande position.
-				2015-03-14 22:30</div>
+				<div class="species"><strong>Art:</strong><p> <%= species %></p><br>
+					<strong>Familj:</strong><p> <%= family %></p><br>
+					<strong>Klass:</strong><p> <%= speciesclass %></p><br>
+					<strong>Rike:</strong><p> <%= kingdom %></p></div>
+				<strong>Rapporterad:</strong><br>
+				<p>2500m ifrån din nuvarande position.
+				2015-03-14 22:30</p>
+				</div>
 				<br>
 				<br>
 			</div>

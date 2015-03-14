@@ -4,7 +4,7 @@ var Account = require('../models/account');
 var router = express.Router();
 
 function progressbar(user){
-    return parseInt( (user.xp / 100) * 100);  
+    return parseInt( (user.xp / (user.level * 10)) * 100);  
 };
 
 router.get('/', function (req, res) {

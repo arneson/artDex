@@ -8,7 +8,7 @@ var Account = new Schema({
     password: String,
 	animalOfDay: String,
 	lastUpdatedAnimal: Date,
-	xp: {type : Number,default : 0},
+	xp: {type : Number,default : 20},
 	level: {type : Number,default : 0},
 	badges: [Badge.Schema]
 });

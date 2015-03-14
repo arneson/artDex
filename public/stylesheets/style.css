@@ -27,7 +27,15 @@ body{
     border-color: #785616;
 }
 
-.navbar-brand {float:none;}
+.navbar-brand {
+	float:none;
+}
+
+a.navbar-brand {
+	color: #000000;
+}
+
+
 
 .login-header {
 	text-align: center;

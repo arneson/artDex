@@ -1,8 +1,37 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #AF9D4E;
 }
 
 a {
   color: #00B7FF;
+}
+.navbar {
+	border: 0px;
+}
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    background-color: #785616;
+    border-color: #785616;
+}
+
+.navbar-brand {float:none;}
+
+.login-header {
+	text-align: center;
+}
+
+.species p{
+	font-style: italic;
+	display: inline;
+}
+body{
+ padding:0px;
+ padding-top: 50px;
+ margin:0px;
+ font-family: 'Open Sans', sans-serif;
 }

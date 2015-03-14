@@ -5,7 +5,11 @@ var router = express.Router();
 
 
 router.get('/', function (req, res) {
-    res.render('index', { user : req.user });
+	if(req.user){
+		res.render('index', { user : req.user });
+	}else{
+		res.redirect('/login');
+	}
 });
 
 router.get('/register', function(req, res) {
@@ -26,7 +30,7 @@ router.post('/register', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login', { user : req.user });
+    res.render('login', { user : req.user, species : 'Älg' , family : 'Hjortdjur', speciesclass : 'Däggdjur', kingdom : 'Djur'});
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {

@@ -1,0 +1,30 @@
+användare
+	namn
+	points
+	hittadedjur
+	vänner
+	bilder
+
+dagens djur
+	slumpa ett djur inom 10mil   använder: alla djur inom 10 mil
+
+alla djur inom 10 mil
+
+
+
+djur
+	position
+	namn
+	bild
+	fridlyst?
+
+
+registrera
+	skicka upp bild för koll 
+
+hitta
+	användare
+	djur
+
+
+

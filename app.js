@@ -1,3 +1,5 @@
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 // dependencies
 var express = require('express');
 var path = require('path');
@@ -35,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
+var Soap = require('./soaps/analys');
 
 // passport config
 var Account = require('./models/account');

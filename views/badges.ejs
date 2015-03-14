@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <metaname='viewport' content='width=device-width initial-scale=1.0'>
+  </head>
+<div class="container">
+    <h1> Badges</h1>
+    <ul style="list-style:none">
+    <% for(var i=0; i<badges.length; i++) { %>
+        <li>
+            <p class="lead">
+              <%= badges[i].text%>
+            </p>
+            <img width="200px" height="200px" src=<%= badges[i].imageUrl%>>
+        </li>
+    <% } %>
+    <ul>
+</div>
+
+</html>

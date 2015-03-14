@@ -15,6 +15,8 @@ var multer  = require('multer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var animals = require('./functions/reportFinding');
+var badges = require('./routes/badges');
+
 var Badge = require('./models/badges');
 
 var app = express();
@@ -58,6 +60,7 @@ onFileUploadComplete: function (file) {
 
 app.use('/', routes);
 app.use('/animals',animals);
+app.use('/badges',badges);
 //var Soap = require('./soaps/analys');
 
 // passport config
@@ -81,7 +84,7 @@ app.use(function(req, res, next) {
 //   console.log('collection dropped');
 // });
 // var badge1 = new Badge({ 
-//     name: 'Letare!',
+//     text: 'Letare!',
 //     criteria:{prop:'sightings',theVal:1},
 //     imageUrl: '/badges/letare.png'
 // });
@@ -89,7 +92,7 @@ app.use(function(req, res, next) {
 //     if (err) return console.error(err);
 // });
 // var badge2 = new Badge({ 
-//     name: 'Femling',
+//     text: 'Femling',
 //     criteria:{prop:'sightings',theVal:5},
 //     imageUrl: '/badges/femling.png'
 // });

@@ -10,9 +10,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var multer  = require('multer');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var animals = require('./functions/reportFinding');
 
 var app = express();
 
@@ -35,9 +37,27 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var done=false;
+var router = express.Router();
+
+app.use(multer({ dest: './uploads/',
+ rename: function (fieldname, filename) {
+    return filename+Date.now();
+  },
+onFileUploadStart: function (file) {
+  console.log(file.originalname + ' is starting ...')
+},
+onFileUploadComplete: function (file) {
+  console.log(file.fieldname + ' uploaded to  ' + file.path)
+  done=true;
+}
+}));
+
+
 
 app.use('/', routes);
-var Soap = require('./soaps/analys');
+app.use('/animals',animals);
+//var Soap = require('./soaps/analys');
 
 // passport config
 var Account = require('./models/account');

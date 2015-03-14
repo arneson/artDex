@@ -102,8 +102,9 @@ soap.createClient(url, function(err, client){
     //console.log('err: ',err);
     //console.log('resp: ',result);
     delete result.LoginResult['User'];
-    args2.clientInformation.Token = result.LoginResult.Token;
-    args2.clientInformation.Locale = result.LoginResult.Locale;
+    // args2.clientInformation.Token = result.LoginResult.Token;
+    // args2.clientInformation.Locale = result.LoginResult.Locale;
+    args2.clientInformation = result.LoginResult;
    console.log("what i send: ", args2);
    /* console.log("Polygons: ", args2.searchCriteria.Polygons);
     console.log("LinearRings: ", args2.searchCriteria.Polygons[0].LinearRings);

@@ -10,7 +10,7 @@ var Account = new Schema({
 	lastUpdatedAnimal: Date,
 	xp: {type : Number,default : 0},
 	level: {type : Number,default : 0},
-	badges: [Badge.Schema]
+	badges: [Badge.schema]
 });
 
 Account.plugin(passportLocalMongoose);

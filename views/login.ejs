@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
+		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+		<metaname='viewport' content='width=device-width initial-scale=1.0'>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#">artDex</a>
+				</div>
+			</div>
+		</nav>
+		
+		<div>
+			<h4>Senast rappoterat</h4>
+			<div style="width:50%; float:left;" >
+				<img style="width:100%;" src="https://www.google.com/images/srpr/logo11w.png">
+			</div>
+			<div class="col-xs-6" style="width:50%">
+				<div>Art: Älg</div>
+				<div>Rappoterad:</div>
+				<div>2500m ifrån din nuvarande position.
+				2015-03-14 22:30</div>
+				
+			</div>
+		</div>
+			
+			
+		<form method="post"> 
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="Enter username" />
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="Password" />
+			</div>
+			<a class="btn btn-info" role="button" href="/register">Registrera</a>
+			<input class="btn btn-primary" type="submit" value="Logga in" default> 
+		</form>
+	</body>
+</html>

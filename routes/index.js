@@ -1,6 +1,7 @@
 var express = require('express');
 var passport = require('passport');
 var Account = require('../models/account');
+var fs = require('fs');
 var router = express.Router();
 
 function progressbar(user){
@@ -38,7 +39,24 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-    res.redirect('/');
+
+	var date = req.user.lastUpdatedAnimal;
+	if(!date || date.getDate() != new Date().getDate()){
+		var obj = require('../beatuifulData.json', 'utf8');
+		var random = parseInt(Math.random()*obj.length);
+		var choosen = obj[random];
+		
+		req.user.animalOfDay = choosen;
+		req.user.lastUpdatedAnimal = new Date();
+		
+		req.user.save(function(err,user){
+			if(err){
+				console.log(err);
+			}else{
+				res.redirect('/');
+			}
+		});
+	}
 });
 
 router.get('/logout', function(req, res) {

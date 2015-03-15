@@ -23,6 +23,7 @@
     "debug": "^2.1.1",
     "node-soap":"latest",
     "multer":"latest",
-    "http":"latest"
+    "http":"latest",
+	"fs":"latest"
   }
 }

@@ -40,8 +40,7 @@
 			</div>
 			<div class="col-md-6" style="width:50%; float:left;">
 				<div class="species"><strong>Art:</strong><p> <%= user.animalOfDay.itemName %></p><br>
-				<%- user.animalOfDay.imageUrl %>
-				<img border="0" src="//maps.googleapis.com/maps/api/staticmap?center=<%- user.animalOfDay.lng %>,<%- user.animalOfDay.lat %>&amp;zoom=5&amp;size=300x300&markers=<%- user.animalOfDay.lng %>,<%- user.animalOfDay.lat %>" >
+				<img border="0" class="img-circle" src="//maps.googleapis.com/maps/api/staticmap?center=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>&amp;zoom=7&amp;size=300x300&markers=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>" >
 				
 				</div>
 					<br>

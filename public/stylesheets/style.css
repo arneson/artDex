@@ -11,8 +11,15 @@ a {
 body{
  padding:0px;
  padding-top: 50px;
+ padding-bottom: 50px;
  margin:0px;
  font-family: 'Open Sans', sans-serif;
+ overflow-y:hidden;
+}
+
+.container{
+height: calc(100% - 30px);
+overflow-y:scroll;
 }
 
 .navbar {
@@ -35,7 +42,10 @@ a.navbar-brand {
 	color: #000000;
 }
 
-
+.grayscaleimage {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(100%);
+}
 
 .login-header {
 	text-align: center;

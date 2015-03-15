@@ -8,10 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 		<style>#progressbar > div {
-   background-color: green;
    width: <%= progressbarwidth %>%; /* Adjust with JavaScript */
-   height: 10px;
-   border-radius: 10px;
+
 }</style>
 		<metaname='viewport' content='width=device-width initial-scale=1.0'>
 	</head>
@@ -33,9 +31,9 @@
 
 		</div>
 		<div>
-			<h3>Dagens bonus art</h3>
+			<h3>Dagens bonusart</h3>
 			<div class="col-md-6" style="width:50%; float:left;" >
-					<img style="width:100%;" src="https://www.google.com/images/srpr/logo11w.png">
+					<img style="width:150px; height:150px" class="img-circle" src="http://www.artportalen.se//MediaLibrary/2015/3/ae3b75cc-6059-4f6d-96d0-acd939011937_image.jpg">
 			</div>
 			<div class="col-md-6" style="width:50%; float:left;">
 				<div class="species"><strong>Art:</strong><p> <%= species %></p><br>
@@ -52,7 +50,7 @@
 			</div>
 		</div>
 		<nav class="navbar navbar-default navbar-fixed-bottom">
-			<div class="navbar-header">
+			<div class="navbar-header  simon-bottom">
 				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/'">Start</button>
 				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/badges'">Märken</button>
 				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/animals'">Rapportera</button>

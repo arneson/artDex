@@ -20,34 +20,23 @@
         <div class="container">
             <h1> Märken</h1>
             <ul style="list-style:none">
-            <% for(var i=0; i<badges.length; i++) { %>
                 
 
-<div class="container">
-    <h1> Badges</h1>
-    <ul style="list-style:none">
-    <% for(var i=0; i<badges.length; i++) { %>
-        <li>
-            <p class="lead">
-              <%= badges[i].badge.text%>
-            </p>
-            <img width="200px" height="200px" src=<%= badges[i].badge.imageUrl%>>
-        </li>
-    <% } %>
-    <ul>
-</div>
+			<div class="container">
+				<h1> Badges</h1>
+				<ul style="list-style:none">
+				<% for(var i=0; i<badges.length; i++) { %>
+					<li>
+						<p class="lead">
+						  <%= badges[i].badge.text%>
+						</p>
+						<img width="200px" class="<%= (badges[i].has) ? "" : "grayscaleimage"  %>" height="200px" src=<%= badges[i].badge.imageUrl%>>
+					</li>
+				<% } %>
+				<ul>
+			</div>
 
-
-                <li>
-                    <p class="lead">
-                      <%= badges[i].text%>
-                    </p>
-                    <img width="200px" height="200px" src=<%= badges[i].imageUrl%>  >
-
-                </li>
-            <% } %>
-            <ul>
-        </div>
+            
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="navbar-header">
                 <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/'">Start</button>

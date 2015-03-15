@@ -17,13 +17,10 @@
               <a style="float: right; color: #000000;"href="/logout">Logga ut</a>
             </div>
         </nav>
-        <div class="container">
-            <h1> Märken</h1>
-            <ul style="list-style:none">
                 
 
 			<div class="container">
-				<h1> Badges</h1>
+				<h1>Märken</h1>
 				<ul style="list-style:none">
 				<% for(var i=0; i<badges.length; i++) { %>
 					<li>
@@ -33,7 +30,7 @@
 						<img width="200px" class="<%= (badges[i].has) ? "" : "grayscaleimage"  %>" height="200px" src=<%= badges[i].badge.imageUrl%>>
 					</li>
 				<% } %>
-				<ul>
+				</ul>
 			</div>
 
             

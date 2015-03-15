@@ -11,8 +11,15 @@ a {
 body{
  padding:0px;
  padding-top: 50px;
+ padding-bottom: 50px;
  margin:0px;
  font-family: 'Open Sans', sans-serif;
+ overflow-y:hidden;
+}
+
+.container{
+height: calc(100% - 30px);
+overflow-y:scroll;
 }
 
 .navbar {

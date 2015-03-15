@@ -66,6 +66,7 @@ app.use('/animals',animals);
 app.use('/badges',badges);
 //var Soap = require('./soaps/analys');
 
+
 // passport config
 var Account = require('./models/account');
 passport.use(new LocalStrategy(Account.authenticate()));

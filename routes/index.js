@@ -102,7 +102,7 @@ var date = req.user.lastUpdatedAnimal;
 			}
 		});
 	}else{
-	res.redirect('/');
+	 res.redirect('/');
 	}
 }
 

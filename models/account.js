@@ -7,9 +7,9 @@ var Sighting = require('./sighting');
 var Account = new Schema({
     username: String,
     password: String,
-	animalOfDay: {taxonId : String, itemName: String, imageUrl:String, lng: Number, lat: Number },
+	animalOfDay: {taxonId : String, itemName: String, imageUrl:String, lng: Number, lat: Number ,description:String},
 	lastUpdatedAnimal: Date,
-	xp: {type : Number,default : 0},
+	xp: {type : Number,default : 1},
 	level: {type : Number,default : 1},
 	badges: [Badge.schema],
 	sightings :[Sighting.schema]

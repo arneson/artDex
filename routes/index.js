@@ -28,19 +28,14 @@ router.post('/register', function(req, res) {
         }
 
         passport.authenticate('local')(req, res, function () {
-            res.redirect('/');
+			animalOfTheDay(req,res);
         });
     });
 });
 
 
-router.get('/login', function(req, res) {
-    res.render('login', { user : req.user, species : 'Älg' , family : 'Hjortdjur', speciesclass : 'Däggdjur', kingdom : 'Djur'});
-});
-
-router.post('/login', passport.authenticate('local'), function(req, res) {
-	
-	var date = req.user.lastUpdatedAnimal;
+var animalOfTheDay = function(req, res){
+var date = req.user.lastUpdatedAnimal;
 	console.log(date);
 	if(!date || date.getDate() != new Date().getDate()){
 	console.log("asdasd");
@@ -73,11 +68,19 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 	}else{
 	res.redirect('/');
 	}
+}
+
+router.get('/login', function(req, res) {
+    res.render('login', { user : req.user, species : 'Älg' , family : 'Hjortdjur', speciesclass : 'Däggdjur', kingdom : 'Djur'});
+});
+
+router.post('/login', passport.authenticate('local'), function(req, res) {
+	animalOfTheDay(req,res);
 });
 
 router.get('/logout', function(req, res) {
     req.logout();
-    res.redirect(201,'/');
+    res.redirect('/');
 });
 
 router.get('/ping', function(req, res){

@@ -3,12 +3,16 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   /*background-color: #AF9D4E;*/
   background-color: #B4F3E5;
+  color:black;
 }
 
 a {
   color: #00B7FF;
 }
-
+html{
+  width: 100%;
+  height:100%;
+}
 body{
  padding:0px;
  padding-top: 50px;
@@ -16,6 +20,14 @@ body{
  margin:0px;
  font-family: 'Open Sans', sans-serif;
  overflow-y:hidden;
+}
+.login-body{
+  background-image: url(/IMG_06191.jpg);
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100%;
+  width: 100%;
 }
 .login-header{
   margin-top: 60px;

@@ -19,8 +19,8 @@
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-header">
-			  <a class="navbar-brand" style="color:#000000;" href="#">artDex</a>
-			  <%- (user) ? user.username : "Notloggedin" %>
+			  <a class="navbar-brand" style="color:#000000;" href="#"><span class="glyphicon glyphicon-leaf"></span> artDex</a>
+			  <span style="margin-left:20px"><%- (user) ? "<span class='glyphicon glyphicon-user'></span>" + user.username : "Notloggedin" %></span>
 			  <a style="float: right; color: #000000;"href="/logout">Logga ut</a>
 			</div>
 		</nav>
@@ -34,13 +34,13 @@
 
 		</div>
 		<div>
-			<h3>Dagens bonusart</h3>
-			<div class="col-md-6" style="width:50%; float:left;" >
-					<img style="width:150px; height:150px" class="img-circle" src=<%- user.animalOfDay.imageUrl %>>
+			<h3 style="text-align:center">Dagens djur</h3>
+			<div class="col-md-6" style="width:180px; margin-top:10px; float:left; margin-left:10px;" >
+					<img style="width:150px; height:150px" class="img-circle img-border" src=<%- user.animalOfDay.imageUrl %>>
 			</div>
-			<div class="col-md-6" style="width:50%; float:left;">
+			<div class="col-md-6" style="width:200px; float:left;">
 				<div class="species"><strong>Art:</strong><p> <%= user.animalOfDay.itemName %></p><br>
-				<img border="0" class="img-circle" src="//maps.googleapis.com/maps/api/staticmap?center=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>&amp;zoom=7&amp;size=300x300&markers=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>" >
+				<img style="margin-top:10px" class="img-rounded img-border" src="//maps.googleapis.com/maps/api/staticmap?center=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>&amp;zoom=12&amp;size=200x200&markers=<%- user.animalOfDay.lat %>,<%- user.animalOfDay.lng %>" >
 				
 				</div>
 					<br>
@@ -50,10 +50,9 @@
 		</div>
 		<nav class="navbar navbar-default navbar-fixed-bottom">
 			<div class="navbar-header  simon-bottom">
-				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/'">Start</button>
-				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/badges'">Märken</button>
-				<button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/animals'">Rapportera</button>
-				<button type="button" class="btn btn-default navbar-btn">HS</button>
+				<button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/'">Start</button>
+				<button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/badges'">Märken</button>
+				<button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/animals'">Rapportera</button>
 				 
 			
 			</div>

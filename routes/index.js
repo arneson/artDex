@@ -1,6 +1,7 @@
 var express = require('express');
 var passport = require('passport');
 var Account = require('../models/account');
+var Species = require('../models/species');
 var fs = require('fs');
 var router = express.Router();
 
@@ -33,6 +34,41 @@ router.post('/register', function(req, res) {
     });
 });
 
+
+initAnimals();
+function initAnimals(){
+  var obj = require('../beatuifulData.json', 'utf8');
+    //var choosen = obj[random];
+
+
+    for(var i = 0; i<obj.length;i++){
+      var choosen = obj[i];
+      var strings = choosen.location.split(",");
+      var lat = strings[0].substring(1); 
+      SetRT90WGS84();
+      var lng = strings[1].substring(2).split(" ")[0];
+      var xy = {x: parseInt(lng), y: parseInt(lat)};
+      var ll = {};
+      var latlng = XYtoLatLong(xy,ll);
+    
+      //console.log(xy);
+      //console.log(ll);
+      choosen.lng = ll.Long;
+      choosen.lat = ll.Lat;
+      var animalData = choosen;
+      var newAnimal = new Species({ 
+          itemName: animalData.itemName,
+          taxonId:animalData.taxonId,
+          imageUrl:animalData.imageUrl,
+          location: {coordinates:[animalData.lat,animalData.lng]}
+      });
+      newAnimal.save(function(err, animal){
+          if (err) return console.error(err);
+          //console.log(animal);
+      });
+
+    }
+}
 
 var animalOfTheDay = function(req, res){
 var date = req.user.lastUpdatedAnimal;

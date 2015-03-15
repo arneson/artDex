@@ -56,6 +56,9 @@ onFileUploadComplete: function (file) {
 }
 }));
 
+ mongoose.connection.collections['animals'].drop( function(err) {
+   console.log('collection dropped');
+ });
 
 
 app.use('/', routes);
@@ -78,6 +81,7 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
+
 
 
 // mongoose.connection.collections['badges'].drop( function(err) {

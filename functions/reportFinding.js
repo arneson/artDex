@@ -5,6 +5,7 @@ var multer  = require('multer');
 var Sighting = require('../models/sighting');
 var Auth = require('./auth');
 var Badges = require('../models/badges');
+var Animals = require('../models/species');
 // var app = express();
 // var done=false;
 
@@ -31,7 +32,9 @@ var Badges = require('../models/badges');
 // });
 
 router.get('/',Auth.loggedIn,function(req,res){
-      res.render('upload');
+      Animals.find({},function(err,animals){
+      	res.render('upload',{animals:animals});
+      });
   });
 
 router.post('/api/photo',function(req,res){

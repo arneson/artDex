@@ -12,7 +12,7 @@
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-header">
-              <a class="navbar-brand" style="color:#000000;" href="#">artDex</a>
+              <a class="navbar-brand" style="color:#000000;" href="#"><span class="glyphicon glyphicon-leaf"></span> artDex</a>
               
               <a style="float: right; color: #000000;"href="/logout">Logga ut</a>
             </div>
@@ -20,14 +20,14 @@
                 
 
 			<div class="container">
-				<h1>Märken</h1>
-				<ul style="list-style:none">
+				<h1 style="text-align:center">Märken</h1>
+				<ul style="list-style:none; padding-left:0;">
 				<% for(var i=0; i<badges.length; i++) { %>
 					<li>
-						<p class="lead">
+						<p style="text-align:center; margin-bottom:2px;margin-top:10px" class="lead">
 						  <%= badges[i].badge.text%>
 						</p>
-						<img width="200px" class="<%= (badges[i].has) ? "" : "grayscaleimage"  %>" height="200px" src=<%= badges[i].badge.imageUrl%>>
+						<img  style="margin-left:calc(50% - 100px); margin-top:0px" width="200px" class="<%= (badges[i].has) ? "" : "grayscaleimage"  %>" height="200px" src=<%= badges[i].badge.imageUrl%>>
 					</li>
 				<% } %>
 				</ul>
@@ -36,10 +36,9 @@
             
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="navbar-header">
-                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/'">Start</button>
-                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/badges'">Märken</button>
-                <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='/animals'">Rapportera</button>
-                <button type="button" class="btn btn-default navbar-btn">HS</button>
+                <button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/'">Start</button>
+                <button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/badges'">Märken</button>
+                <button type="button" class="btn btn-lg btn-success navbar-btn simon-button" onclick="window.location.href='/animals'">Rapportera</button>
                  
             
             </div>

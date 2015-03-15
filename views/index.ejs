@@ -11,6 +11,9 @@
    width: <%= progressbarwidth %>%; /* Adjust with JavaScript */
 
 }</style>
+
+	
+
 		<metaname='viewport' content='width=device-width initial-scale=1.0'>
 	</head>
 	<body>
@@ -33,16 +36,13 @@
 		<div>
 			<h3>Dagens bonusart</h3>
 			<div class="col-md-6" style="width:50%; float:left;" >
-					<img style="width:150px; height:150px" class="img-circle" src="http://www.artportalen.se//MediaLibrary/2015/3/ae3b75cc-6059-4f6d-96d0-acd939011937_image.jpg">
+					<img style="width:150px; height:150px" class="img-circle" src=<%- user.animalOfDay.imageUrl %>>
 			</div>
 			<div class="col-md-6" style="width:50%; float:left;">
-				<div class="species"><strong>Art:</strong><p> <%= user.animalOfDay %></p><br>
-					<strong>Familj:</strong><p> <%= family %></p><br>
-					<strong>Klass:</strong><p> <%= speciesclass %></p><br>
-					<strong>Rike:</strong><p> <%= kingdom %></p><br>
-					<strong>Rapporterad:</strong><br>
-					<p>2500m ifrån din nuvarande position.
-					2015-03-14 22:30</p>
+				<div class="species"><strong>Art:</strong><p> <%= user.animalOfDay.itemName %></p><br>
+				<%- user.animalOfDay.imageUrl %>
+				<img border="0" src="//maps.googleapis.com/maps/api/staticmap?center=<%- user.animalOfDay.lng %>,<%- user.animalOfDay.lat %>&amp;zoom=5&amp;size=300x300&markers=<%- user.animalOfDay.lng %>,<%- user.animalOfDay.lat %>" >
+				
 				</div>
 					<br>
 					<br>
